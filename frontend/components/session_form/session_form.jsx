@@ -33,7 +33,85 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'login') {
       return <Link to="/signup">Sign Up</Link>;
     } else {
-      return <Link to="/login">Log In</Link>;
+      return <Link to="/login">Sign In</Link>;
+    }
+  }
+
+  renderSignupFields() {
+    if (this.props.formType === 'signup' ) {
+      return (
+        <ul>
+          <label>Username:
+            <input
+              type="text"
+              value={this.state.username}
+              onChange={this.update('username')}
+              className="login-input"
+            />
+          </label>
+
+          <br />
+
+          <label>Zip Code:
+            <input
+              type="text"
+              value={this.state.address}
+              onChange={this.update('address')}
+              className="login-input"
+            />
+          </label>
+
+          <br />
+
+          <label>Email:
+            <input
+              type="text"
+              value={this.state.email}
+              onChange={this.update('email')}
+              className="login-input"
+            />
+          </label>
+
+          <br />
+
+          <label>Create a password:
+            <input
+              type="text"
+              value={this.state.password}
+              onChange={this.update('password')}
+              className="login-input"
+            />
+          </label>
+
+        </ul>
+      );
+    }
+  }
+
+  renderSigninFields() {
+    if (this.props.formType === 'login' ) {
+      return (
+        <ul>
+          <label>Username:
+            <input
+              type="text"
+              value={this.state.username}
+              onChange={this.update('username')}
+              className="login-input"
+            />
+          </label>
+
+          <label>Password:
+            <input
+              type="text"
+              value={this.state.password}
+              onChange={this.update('password')}
+              className="login-input"
+            />
+          </label>
+
+        </ul>
+      );
     }
   }
 
@@ -54,6 +132,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    const text = this.props.formType === 'login' ? "Sign In" : "Sign Up";
 
     return (
       <div className="login-form-container">
@@ -62,7 +141,7 @@ class SessionForm extends React.Component {
 
           Welcome to Baxter!
           <br/>
-          Please {this.props.formType} or {this.navLink()}
+          Please {text} or {this.navLink()}
 
           {this.renderErrors()}
 
@@ -70,29 +149,19 @@ class SessionForm extends React.Component {
 
             <br/>
 
-            <label>Username:
-              <input
-                type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
+
 
             <br/>
 
-            <label>Password:
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
+            {this.renderSignupFields()}
+
+            <br />
+
+            {this.renderSigninFields()}
 
             <br/>
 
-            <input type="submit" value="Submit" />
+            <input type="submit" value={text} />
 
           </div>
 
