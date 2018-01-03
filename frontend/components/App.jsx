@@ -5,14 +5,20 @@ import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 
 const App = () => (
-  <div>
-    <header>
-      <h1>Baxter</h1>
-      <GreetingContainer />
-    </header>
+  <div className="main">
 
-    <AuthRoute path="/login" component={SessionFormContainer} />
-    <AuthRoute path="/signup" component={SessionFormContainer} />
+    <div className="navbar">
+      <header>
+        <h1>Baxter</h1>
+
+        <GreetingContainer />
+      </header>
+    </div>
+
+      <div className='main-content'>
+        <AuthRoute path="/login" component={SessionFormContainer} />
+        <AuthRoute path="/signup" component={SessionFormContainer} />
+      </div>
 
   </div>
 );
