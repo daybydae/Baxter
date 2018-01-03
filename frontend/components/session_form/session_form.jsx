@@ -143,32 +143,40 @@ class SessionForm extends React.Component {
 
         <div className="primary-content-block">
 
+          <div className="form-box">
 
-            <header className="page-header">
-              <h1 className="header-title">
-                {title}
-              </h1>
-            </header>
+            <div class="padding-form">
+              
+              <header className="page-header">
+                <h1 className="header-title">
+                  <span>
+                    {title}
+                  </span>
+                </h1>
+              </header>
 
-            <form onSubmit={this.handleSubmit} className="login-form-box">
+              <form onSubmit={this.handleSubmit} className="login-form-box">
 
-            {this.renderErrors()}
+                {this.renderErrors()}
 
-            <div className="login-form">
+                <div className="login-form">
 
-              {this.renderSignupFields()}
+                  {this.renderSignupFields()}
 
-              <br />
+                  <br />
 
-              {this.renderSigninFields()}
+                  {this.renderSigninFields()}
 
-              <br/>
+                  <br/>
 
-              <input className="form-submit-button" type="submit" value={text} />
+                  <input className="form-submit-button" type="submit" value={text} />
 
+                </div>
+
+              </form>
             </div>
 
-          </form>
+          </div>
 
         </div>
 

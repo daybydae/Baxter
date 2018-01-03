@@ -1,10 +1,8 @@
 
-.login-input {
-
-}
 
 .session-form-label {
   color: #555;
+  font-size: 11px;
 }
 
 .login-form-container {
@@ -13,21 +11,58 @@
 
 .primary-content-block {
   padding: 30px;
-  background: #555;
+  background-color: #ebeeef!important;
+}
+
+.form-box {
+  background: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align:center;
+}
+
+.header-title {
+  font-weight: 400;
+}
+
+.padding-form {
+  padding: 5% 10%!important;
+}
+
+.login-form-box {
+  display: block;
+}
+
+.login-form {
+  padding-top: 10px;
+
 }
 
 .form-submit-button {
+  display:block;
   background: #00bd70;
   border-color: #00bd70;
   color: #fff;
-  display: block;
   width: 100%;
-  padding: 10px 16px;
-  font-size: 16px;
+  padding: 10px 0px;
   line-height: 1.6;
   border-radius: 4px;
   font-weight: 400;
   text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
+  margin: 0 auto;
+  font-size: 12px;
+
+}
+
+.login-input {
+  display:block;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }

@@ -5,7 +5,7 @@ fieldset, label, input, textarea,
 span, article, footer, time, small {
   margin: 0;
   padding: 0;
-
+  border: 0;
   outline: 0;
   font-family: inherit;
   color: inherit;
@@ -36,7 +36,8 @@ button {
   Get rid of native styling. Read more here:
   http://css-tricks.com/almanac/properties/a/appearance/
   */
-
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 button,
