@@ -41,7 +41,8 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'signup' ) {
       return (
         <ul>
-          <label>Username:
+          <label>Name:
+            <br />
             <input
               type="text"
               value={this.state.username}
@@ -53,6 +54,7 @@ class SessionForm extends React.Component {
           <br />
 
           <label>Zip Code:
+            <br />
             <input
               type="text"
               value={this.state.address}
@@ -64,6 +66,7 @@ class SessionForm extends React.Component {
           <br />
 
           <label>Email:
+            <br />
             <input
               type="text"
               value={this.state.email}
@@ -75,6 +78,7 @@ class SessionForm extends React.Component {
           <br />
 
           <label>Create a password:
+            <br />
             <input
               type="text"
               value={this.state.password}
@@ -92,16 +96,20 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'login' ) {
       return (
         <ul>
-          <label>Username:
+          <label>Email:
+            <br />
             <input
               type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
+              value={this.state.email}
+              onChange={this.update('email')}
               className="login-input"
             />
           </label>
 
+          <br />
+
           <label>Password:
+            <br />
             <input
               type="text"
               value={this.state.password}
