@@ -118,6 +118,22 @@ class SessionForm extends React.Component {
     }
   }
 
+  renderFinePrint() {
+    if (this.props.formType === 'signup' ) {
+      return (
+        <div>
+          <p className="fine-print">
+            Already have a Baxter account?
+            &nbsp;
+            <Link className="signinLink" to="/login">Sign in now</Link>
+          </p>
+        </div>
+      );
+    } else {
+      
+    }
+  }
+
   renderErrors() {
     if (this.props.errors !== null ) {
       return (
@@ -145,8 +161,8 @@ class SessionForm extends React.Component {
 
           <div className="form-box">
 
-            <div class="padding-form">
-              
+            <div className="padding-form">
+
               <header className="page-header">
                 <h1 className="header-title">
                   <span>
@@ -172,6 +188,10 @@ class SessionForm extends React.Component {
                   <input className="form-submit-button" type="submit" value={text} />
 
                 </div>
+
+                <br />
+
+                {this.renderFinePrint()}
 
               </form>
             </div>
