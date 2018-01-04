@@ -5,7 +5,7 @@ class Api::SittersController < ApplicationController
   end
 
   def index
-    render :index
+    @sitters = Sitter.all
   end
 
   def create
