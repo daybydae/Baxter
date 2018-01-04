@@ -1,11 +1,25 @@
 class Api::SittersController < ApplicationController
 
   def show
-    @bench = Bench.find(params[:id])
+    @sitter = Sitter.find(params[:id])
   end
 
   def index
     render :index
   end
 
+  def create
+    @sitter = Sitter.new(sitter_params)
+
+    if @sitter.save!
+      render :show
+    else
+      render json: @sitter.errors.full_messages, status: 422
+    end
+
+  end
+
+  def sitter_params
+    params.require(:sitter).permit(:sittername, :location, :rates, :lat, :lng)
+  end
 end
