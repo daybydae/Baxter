@@ -187,8 +187,6 @@ class SessionForm extends React.Component {
 
                   {this.renderSignupFields()}
 
-                  <br />
-
                   {this.renderSigninFields()}
 
                   <br/>
