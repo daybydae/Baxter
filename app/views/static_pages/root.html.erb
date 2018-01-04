@@ -4,7 +4,11 @@
   	window.currentUser = <%= render("api/users/user.json.jbuilder",
   		user: current_user).html_safe %>
   <% end %>
-  
+
+  window.staticImages = {
+    logoImage: "<%= asset_url("bulldoggreen.png") %>"
+  }
+
 </script>
 
 <main id="root"></main>

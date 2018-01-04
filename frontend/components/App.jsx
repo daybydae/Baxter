@@ -8,14 +8,19 @@ const App = () => (
   <div className="main">
 
     <div className="navbar">
-      <header>
-        <div className="brand-icon">
-          <h1>Baxter</h1>
+      <header className="nav-header">
 
+        <div className="icon-baxter-duo">
+          <div className="brand-icon">
+            <img src={window.staticImages.logoImage}/>
+          </div>
+
+          <h1 className="baxter">&nbsp;Baxter</h1>
         </div>
 
         <NavContainer />
       </header>
+
     </div>
 
       <div className='main-content'>

@@ -18,8 +18,10 @@ const userNavLinks = (currentUser, logout) => (
 
 const sessionLinks = () => (
   <nav className="header-logged-in-links">
+    <Link to="/login">Demo Login</Link>
+    &nbsp;&nbsp;&nbsp;&nbsp;
     <Link to="/signup">Sign Up</Link>
-    &nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
     <Link to="/login">Sign In</Link>
   </nav>
 );
