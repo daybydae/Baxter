@@ -40,10 +40,11 @@ class Nav extends React.Component {
           <Link to={"/"}>
             {this.props.currentUser.username}
           </Link>
-          &nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
           <Link to={"/"}>
             Bookings
           </Link>
+          &nbsp;&nbsp;&nbsp;&nbsp;
           <button className="logout-button" onClick={this.handleLogout}>
             Log Out
           </button>
@@ -54,11 +55,7 @@ class Nav extends React.Component {
   };
 
   render () {
-    return (
-      <div>
-        {this.userNavLinks()}
-      </div>
-    );
+    return this.userNavLinks();
   }
 }
 
