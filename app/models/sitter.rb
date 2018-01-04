@@ -1,5 +1,8 @@
 class Sitter < ApplicationRecord
-  validates :sittername, :rates, presence: true
-  validates :verified, :current_user_favorite, presence: true
+  validates :sittername, :location, :rates, presence: true
+  validates :lat, :lng, presence: true
+
+
+
 
 end
