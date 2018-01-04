@@ -26,6 +26,7 @@ class Nav extends React.Component {
           <button
             type="button"
             onClick={this.handleSubmit}
+            className="demo-login-button"
           >Demo Login</button>
 
           &nbsp;&nbsp;&nbsp;&nbsp;
