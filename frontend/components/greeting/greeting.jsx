@@ -18,9 +18,9 @@ const userNavLinks = (currentUser, logout) => (
 
 const sessionLinks = () => (
   <nav className="header-logged-in-links">
-    <Link to="/login">Sign In</Link>
-    &nbsp;&nbsp;
     <Link to="/signup">Sign Up</Link>
+    &nbsp;&nbsp;
+    <Link to="/login">Sign In</Link>
   </nav>
 );
 

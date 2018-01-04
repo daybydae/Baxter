@@ -75,7 +75,7 @@ class SessionForm extends React.Component {
           <label className = "session-form-label">Create a password:
             <br />
             <input
-              type="text"
+              type="password"
               value={this.state.password}
               onChange={this.update('password')}
               className="login-input"
@@ -106,7 +106,7 @@ class SessionForm extends React.Component {
           <label className = "session-form-label">Password:
             <br />
             <input
-              type="text"
+              type="password"
               value={this.state.password}
               onChange={this.update('password')}
               className="login-input"
@@ -130,7 +130,15 @@ class SessionForm extends React.Component {
         </div>
       );
     } else {
-      
+      return (
+        <div>
+          <p className="fine-print">
+            Don't have a Baxter account?
+            &nbsp;
+            <Link className="signinLink" to="/signup">Sign up now</Link>
+          </p>
+        </div>
+      );
     }
   }
 

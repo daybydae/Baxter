@@ -60,11 +60,13 @@
 .login-input {
   display:block;
   width: 100%;
-  font-size: 16px;
-  text-align: center;
+  font-size: 12px;
+  padding: 0 5px;
   margin: 0 auto;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  border-radius: 4px;
+  line-height: 2.5;
 }
 
 .fine-print {
