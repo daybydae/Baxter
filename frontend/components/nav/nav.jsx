@@ -24,9 +24,9 @@ const sessionLinks = () => (
   </nav>
 );
 
-const Greeting = ({ currentUser, logout }) => (
+const Nav = ({ currentUser, logout }) => (
   currentUser ? userNavLinks(currentUser, logout) : sessionLinks()
 );
 
 
-export default Greeting;
+export default Nav;
