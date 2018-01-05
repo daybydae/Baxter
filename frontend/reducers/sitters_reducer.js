@@ -1,5 +1,5 @@
 import { RECEIVE_ALL_SITTERS, RECEIVE_SITTER, REMOVE_SITTER } from '../actions/sitter_actions';
-
+import { merge } from 'lodash';
 
 const sittersReducers = (oldState = {}, action) => {
   Object.freeze(oldState);

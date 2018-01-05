@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SitterIndex from './sitter_index';
-import { fetchSitters, fetchSitter } from '../../actions/sitter_actions';
+import { fetchSitters } from '../../actions/sitter_actions';
 
 const mapStateToProps = (state) => {
   return {

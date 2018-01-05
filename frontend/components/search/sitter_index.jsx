@@ -8,7 +8,7 @@ class SitterIndex extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="index">
         <h1>Sitters: </h1>
         <ul>
           {
