@@ -30,9 +30,11 @@ class Nav extends React.Component {
           >Demo Login</button>
 
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <Link to="/signup">Sign Up</Link>
+          <a href="#/signup" onClick={this.props.removeErrors}>Sign Up</a>
+
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <Link to="/login">Sign In</Link>
+          <a href="#/login" onClick={this.props.removeErrors}>Sign In</a>
+
         </nav>
       );
     } else {

@@ -5,15 +5,15 @@ export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 export const REMOVE_ERRORS = "REMOVE_ERRORS";
 
 export const login = (user) => dispatch => {
-  return SessionApiUtil.login(user).then( user => dispatch(receiveCurrentUser(user)), error => dispatch(receiveErrors(error)));
+  return SessionApiUtil.login(user).then( user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors)));
 };
 
 export const logout = () => dispatch => {
-  return SessionApiUtil.logout().then( () => dispatch(receiveCurrentUser(null)), error => dispatch(receiveErrors(error)));
+  return SessionApiUtil.logout().then( () => dispatch(receiveCurrentUser(null)), errors => dispatch(receiveErrors(errors)));
 };
 
 export const signup = (user) => dispatch => {
-  return SessionApiUtil.signup(user).then( user => dispatch(receiveCurrentUser(user)), error => dispatch(receiveErrors(error)));
+  return SessionApiUtil.signup(user).then( user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors)));
 };
 
 export const receiveCurrentUser = user => {
@@ -23,10 +23,10 @@ export const receiveCurrentUser = user => {
   };
 };
 
-export const receiveErrors = (error) => {
+export const receiveErrors = (errors) => {
   return {
     type: RECEIVE_SESSION_ERRORS,
-    error
+    errors
   };
 };
 

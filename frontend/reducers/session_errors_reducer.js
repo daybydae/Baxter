@@ -6,7 +6,7 @@ const sessionErrorsReducer = (oldState=[], action) => {
     case RECEIVE_CURRENT_USER:
       return [];
     case RECEIVE_SESSION_ERRORS:
-      return action.error.responseJSON;
+      return action.errors.responseJSON;
     case REMOVE_ERRORS:
       return [];
     default:
