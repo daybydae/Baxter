@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_SITTERS } from '../actions/sitter_actions';
+import { RECEIVE_ALL_SITTERS, RECEIVE_SITTER, REMOVE_SITTER } from '../actions/sitter_actions';
 
 
 const sittersReducers = (oldState = {}, action) => {
@@ -7,13 +7,11 @@ const sittersReducers = (oldState = {}, action) => {
     case RECEIVE_ALL_SITTERS:
       return action.sitters;
     case RECEIVE_SITTER:
-      return 
+      return merge({}, oldState, {[action.sitter.id]: action.sitter});
     case REMOVE_SITTER:
-
-    case RECEIVE_ERRORS:
-
-    case REMOVE_ERRORS:
-      return [];
+      let newState = merge({}, oldState);
+      delete newState[action.sitterId];
+      return newState;
     default:
       return oldState;
   }
