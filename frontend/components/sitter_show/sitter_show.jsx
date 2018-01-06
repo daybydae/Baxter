@@ -21,7 +21,7 @@ class SitterShow extends React.Component {
 
           <SitterDetail
             sitter={this.props.sitter}
-            />
+          />
 
         </div>
 

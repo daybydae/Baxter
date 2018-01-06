@@ -5,15 +5,28 @@ const SitterDetail = ({ sitter }) => {
 
   return (
     <div className="sitter-detail">
-      <h3>{sitter.sittername}</h3>
-      <ul className="sitter-detail-list">
-        <li>Rating: </li>
-        <li>Description: {sitter.description}</li>
-        <li>Rates: {sitter.rates}</li>
-      </ul>
+      <h3 className="sitter-name-show">{sitter.sittername}</h3>
+      <div className="sitter-details-list-box">
+        <ul className="sitter-detail-list">
+          <li>Rating: </li>
+          <li>Description: &nbsp {sitter.description}</li>
+          <li>Rates: &nbsp{sitter.rates}</li>
+        </ul>
+
+      </div>
+
       <br />
-      <div className="reviews">
-        <h3>Reviews</h3>
+
+    <div className="reviews">
+        <h3 className="sitter-reviews-show">Reviews</h3>
+        <div className="sitter-reviews-list-box">
+          <ul className="sitter-reviews-list">
+            <li>Rating: </li>
+            <li>Description: &nbsp {sitter.description}</li>
+            <li>Rates: &nbsp{sitter.rates}</li>
+          </ul>
+
+        </div>
 
       </div>
     </div>
