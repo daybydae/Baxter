@@ -11,10 +11,83 @@
 
 }
 
-.single-sitter_show {
-  background: white;
+//sitter_show//
+.main-content-sitter-show {
+  background-color: #ebeeef!important;
+
 }
 
+.fixed-contact-bar {
+  top:0;
+  box-shadow: 0 3px 8px -2px rgba(0,0,0,.15);
+  padding: 15px 0;
+  height: 80px;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  transition: top,.5s;
+}
+
+.hero-container {
+  background-color: inherit;
+}
+
+.member-profile-hero-wrap {
+  margin: 40px auto;
+}
+
+.member-profile-photos-row {
+
+}
+
+.member-profile-photos-col {
+
+}
+
+.member-profile-details-col {
+
+}
+
+.member-profile-bottom-half {
+  background-color: #fff;
+}
+
+.member-profile-bottom-half-container {
+
+
+}
+
+.member-profile-bottom-half-row {
+
+}
+
+.col-right {
+
+}
+
+.dog-preferences {
+
+}
+
+.availability {
+
+}
+
+.col-left {
+
+}
+
+.reviews {
+
+}
+
+.about {
+
+}
+
+//sitter_detail//
 .sitter-details {
 
 }
@@ -22,6 +95,7 @@
 .sitter-name-show {
   font-weight: bold;
   font-size: 30px;
+  margin: 0;
 }
 
 .sitter-reviews-show {
@@ -37,5 +111,5 @@
 }
 
 .sitter-reviews-list {
-  
+
 }
