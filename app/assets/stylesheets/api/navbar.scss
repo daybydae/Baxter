@@ -18,9 +18,9 @@
 }
 
 .header-login-signup-links {
-  padding-top: 5px;
   color: #777;
   font-size: 14px;
+  margin-top: 5px;
 }
 
 .logout-button {
@@ -28,9 +28,9 @@
 }
 
 .header-logged-in-links {
-  padding-top: 5px;
   color: #777;
   font-size: 14px;
+  margin-top: 5px;
 }
 
 .brand-icon {
@@ -57,4 +57,17 @@
 
 .demo-login-button {
   font-size: 14px;
+}
+
+.profile-icon {
+  position: relative;
+  width: 15px;
+  margin-right: 10px;
+  margin-bottom: -2px;
+}
+
+.profile-icon-box {
+  border: 1px;
+  display: inline-block;
+
 }

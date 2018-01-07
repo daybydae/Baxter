@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SitterDetail from './sitter_detail';
+import SitterPreferences from './sitter_preferences';
+import SitterAbout from './sitter_about';
+import SitterReviews from './sitter_reviews';
 
 class SitterShow extends React.Component {
   constructor(props) {

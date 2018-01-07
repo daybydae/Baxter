@@ -41,6 +41,14 @@ class Nav extends React.Component {
       return (
         <nav className="header-login-signup-links">
           <Link to={"/"}>
+            <div className="profile-icon-box">
+              <img
+                className="profile-icon"
+                src={this.props.currentUser.image_url}
+                />
+
+            </div>
+
             {this.props.currentUser.username}
           </Link>
           &nbsp;&nbsp;&nbsp;&nbsp;
