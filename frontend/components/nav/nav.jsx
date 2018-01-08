@@ -53,6 +53,10 @@ class Nav extends React.Component {
           </Link>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <Link to={"/"}>
+            <span className="bookings-icon">
+              <i className="far fa-envelope">
+              </i>
+            </span>
             Bookings
           </Link>
           &nbsp;&nbsp;&nbsp;&nbsp;
