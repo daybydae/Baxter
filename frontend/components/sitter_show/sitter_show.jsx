@@ -18,9 +18,12 @@ class SitterShow extends React.Component {
     return (
 
       <div className="main-content-sitter-show">
-        <div className="fixed-contact-bar">
-
-        </div>
+        {//
+        //  <div className="fixed-contact-bar">
+        //    
+        //  </div>
+        //
+        }
 
         <div className="hero-container">
           <div className="member-profile-hero-wrap">

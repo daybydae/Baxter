@@ -15,7 +15,7 @@ const App = () => (
     <div className="navbar">
       <header className="nav-header">
 
-        <Link to="/">
+        <Link to="/" className="brand-nav">
           <div className="icon-baxter-duo">
             <div className="brand-icon">
                 <img src={window.staticImages.logoImage}/>
