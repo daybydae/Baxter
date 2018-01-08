@@ -6,7 +6,7 @@
   background: #fff;
   border-radius: 0;
   border: none;
-  // border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   margin-bottom: 0;
   line-height: 22px;
   height: 50px;
@@ -117,6 +117,7 @@ a:hover, Link:hover, button:hover {
 .nav-right {
   display: flex;
   float: right!important;
+  height: 100%
 }
 
 .caret {
@@ -136,6 +137,7 @@ a:hover, Link:hover, button:hover {
   position: relative;
   display: block;
   padding: 14px 10px 11px;
+  height: 100%;
 }
 
 .header-dropdown-content>li>a, .header-dropdown-content>li>button {
