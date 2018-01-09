@@ -18,25 +18,35 @@ class SitterShow extends React.Component {
     return (
 
       <div className="main-content-sitter-show">
-        {//
+        {
         //  <div className="fixed-contact-bar">
-        //    
+        //
         //  </div>
         //
         }
 
         <div className="hero-container">
           <div className="member-profile-hero-wrap">
+            <div className="member-profile-photos-row-row">
 
-          </div>
-          <div className="member-profile-photos-row">
-            <div className="member-profile-photos-col">
+              <div className="member-profile-photos-row">
+                <div className="member-profile-photos-col">
+                  <div className="hero-image" style={{backgroundImage: `url(${this.props.sitter.image_url})`}}>
+                  </div>
 
+                </div>
+              </div>
+
+              <div className="member-profile-details-col">
+
+                  <SitterDetail
+                    sitter={this.props.sitter}
+                  />
+
+              </div>
             </div>
-            <div className="member-profile-details-col">
-
-            </div>
           </div>
+        </div>
 
         <div className="member-profile-bottom-half">
           <div className="member-profile-bottom-half-container">
@@ -71,14 +81,7 @@ class SitterShow extends React.Component {
         </div>
 
 
-          <div className="sitter-details">
 
-            <SitterDetail
-              sitter={this.props.sitter}
-              />
-
-            </div>
-        </div>
 
       </div>
     );

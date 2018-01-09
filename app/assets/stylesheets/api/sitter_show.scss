@@ -14,7 +14,12 @@
 //sitter_show//
 .main-content-sitter-show {
   background-color: #ebeeef!important;
-
+  margin-top: 0px;
+  transition: margin-top,.4s,ease-out;
+  display: block;
+  min-width: -webkit-fill-available;
+  position: absolute;
+  min-height: 100vh;
 }
 
 .fixed-contact-bar {
@@ -31,22 +36,55 @@
 }
 
 .hero-container {
-  background-color: inherit;
+  background-color: #fff;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 60%;
+  height: 400px;
 }
 
 .member-profile-hero-wrap {
-  // margin: 40px auto;
+  margin: 40px auto;
+  background-color: inherit;
+  position: relative;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 100%;
 }
-
+.member-profile-photos-row-row {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  height: 100%;
+}
 .member-profile-photos-row {
-
+  content: " ";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 66.67%;
 }
 
 .member-profile-photos-col {
-
+  height: 100%
 }
 
+.hero-image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+}
+
+
+
 .member-profile-details-col {
+  float:right;
+  width: 33.33%
 
 }
 

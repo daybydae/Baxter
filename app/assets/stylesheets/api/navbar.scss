@@ -28,6 +28,7 @@
 
 .logout-button {
   font-size: 14px;
+  width: 100%;
 }
 
 .header-logged-in-links {
@@ -150,6 +151,10 @@ a:hover, Link:hover, button:hover {
   font-size: 12px;
   color: #333;
   white-space: nowrap;
+}
+
+.header-dropdown-content>li>a:hover, .header-dropdown-content>li>button:hover {
+  background-color: #f5f5f5;
 }
 .navbar-right .header-dropdown-content {
 

@@ -49,6 +49,7 @@ class Nav extends React.Component {
       return (
         <nav className="header-login-signup-links">
           <ul className="nav-right">
+
             <li className="profile-box">
               <div className="nav-right-box" id="dropdown-profile">
                 <button className="dropbtn" onClick={this.handleClick}>
@@ -67,7 +68,6 @@ class Nav extends React.Component {
 
               </div>
 
-              <li>
                 <ul className="header-dropdown-content" id="dropdown">
                   <li><a href="#">Dashboard</a></li>
                   <li><a href="#">Settings</a></li>
@@ -76,11 +76,10 @@ class Nav extends React.Component {
                     Log Out
                   </button></li>
                 </ul>
-              </li>
             </li>
 
             <li>
-              <div className ="nav-right-box">
+              <div className="nav-right-box">
 
                 <Link to={"/"}>
 
