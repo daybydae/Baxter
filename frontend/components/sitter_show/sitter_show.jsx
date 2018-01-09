@@ -50,31 +50,31 @@ class SitterShow extends React.Component {
 
         <div className="member-profile-bottom-half">
           <div className="member-profile-bottom-half-container">
-            <div className="member-profile-bottom-half-row">
-              <div className="col-right">
-                <section className="dog-preferences">
+            <div className="member-profile-primary-wrap">
+              <div className="member-profile-bottom-half-row">
+                <div className="col-right">
+                  <section className="dog-preferences">
 
-                </section>
-                <section className="availability">
+                  </section>
+                  <section className="availability">
 
-                </section>
-              </div>
-              <div className="col-left">
-                <section className="reviews">
-                  {
-                    //<SitterReviews
-                    //  sitterReviews={this.props.sitter.reviews}
-                    //  />
+                  </section>
+                </div>
+                <div className="col-left">
+                  <section className="reviews">
+                    {
+                      //<SitterReviews
+                      //  sitter={this.props.sitter}
+                      //  />
 
-                  }
-                </section>
-                <section className="about">
-                  {
-                    //<SitterAbout
-                    //  sitterDescription={this.props.sitter.description}
-                    //  />
-                  }
-                </section>
+                    }
+                  </section>
+                  <section className="about">
+                      <SitterAbout
+                       sitter={this.props.sitter}
+                       />
+                  </section>
+                </div>
               </div>
             </div>
           </div>

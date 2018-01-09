@@ -38,3 +38,7 @@ body {
   font-style: italic;
   font-family: brush_script;
 }
+
+.div {
+  display: block;
+}
