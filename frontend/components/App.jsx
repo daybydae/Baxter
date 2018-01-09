@@ -31,7 +31,7 @@ const App = () => (
     </div>
 
       <div className='main-content'>
-        <AuthRoute path="/login" component={SessionFormContainer} />
+        <AuthRoute exact path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
         <Route path="/sitters/:sitterId" component={SitterShowContainer} />
         <Route exact path="/" component={SitterIndexContainer} />

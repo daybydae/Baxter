@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 
 class Nav extends React.Component {
@@ -18,7 +18,7 @@ class Nav extends React.Component {
 
   handleLogout(e) {
     e.preventDefault();
-    this.props.logout();
+    this.props.logout().then( () => this.props.history.push("/login"));
   }
 
   handleClick(e) {
@@ -106,4 +106,4 @@ class Nav extends React.Component {
   }
 }
 
-export default Nav;
+export default withRouter(Nav);

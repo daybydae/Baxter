@@ -97,6 +97,7 @@
 .member-profile-bottom-half {
   background-color: #fff;
   box-sizing: border-box;
+  min-height: 500px;
 }
 
 .member-profile-bottom-half-container {
@@ -106,7 +107,7 @@
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-
+  background-color: #ebeeef !important;
 }
 
 .member-profile-bottom-half-row {
