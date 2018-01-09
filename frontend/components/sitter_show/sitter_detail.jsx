@@ -77,24 +77,27 @@ const SitterDetail = ({ sitter }) => {
         </div>
       </div>
 
-      <div className="contact-favorite-wrap">
-        <div className="favorite-button-col">
-          <button type="button" title="Save to Favorites" className="favorite-button">
-            <span className="default-state">
-              <i>
-                Hello
-              </i>
-            </span>
-          </button>
-        </div>
+      <div className="contact-wrap">
+        <div className="contact-favorite-wrap">
+          <div className="favorite-button-col">
+            <button type="button" title="Save to Favorites" className="favorite-button">
 
-        <div className="contact-button-col">
-          <div>
+              <span className="default-state">
+                <i className="far fa-heart fa-lg" id="open-heart"></i>
+              </span>
+              <span className="favorited-state">
+                <i className="fas fa-heart fa-lg"></i>
+              </span>
+            </button>
+          </div>
 
+          <div className="contact-button-col">
+            <Link to={"/"} className="contact-button">
+              Contact {sitter.sittername}
+            </Link>
           </div>
 
         </div>
-
       </div>
 
     </div>
