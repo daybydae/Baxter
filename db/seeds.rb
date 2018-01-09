@@ -32,8 +32,8 @@ Sitter.create!(
   location: "315 E 105th Street, New York, NY 10029",
   rates: 85.00,
   description: 'Cool guy who loves to help Dae',
-  lat: 40.790814,
-  lng: -73.949113
+  lat: 40.789661,
+  lng: -73.941932
 )
 
 Sitter.create!(

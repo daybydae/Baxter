@@ -4,7 +4,7 @@ import { fetchSitters } from '../../actions/sitter_actions';
 
 const mapStateToProps = (state) => {
   return {
-    sitters: state.entities.sitters
+    sitters: Object.values(state.entities.sitters)
   };
 };
 

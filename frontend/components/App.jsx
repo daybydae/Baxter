@@ -6,6 +6,8 @@ import SitterShowContainer from './sitter_show/sitter_show_container';
 
 import SitterIndexContainer from './search/sitter_index_container';
 
+import SearchContainer from './search/search_container';
+
 import { Route, Link } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 
@@ -34,7 +36,7 @@ const App = () => (
         <AuthRoute exact path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
         <Route path="/sitters/:sitterId" component={SitterShowContainer} />
-        <Route exact path="/" component={SitterIndexContainer} />
+        <Route exact path="/" component={SearchContainer} />
         {// <ProtectedRoute exact path="/users/:userId" component={UserShowContainer} />
         }
 

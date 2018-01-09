@@ -2,10 +2,13 @@
 <html>
   <head>
     <title>Baxter</title>
+
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAYegpP6K-6_lw4zrfaiV2MDYbaMOdmLsk&callback=initMap" %>
+
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    
+
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
   </head>
 
