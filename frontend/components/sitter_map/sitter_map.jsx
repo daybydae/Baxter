@@ -4,6 +4,12 @@ import {withRouter} from 'react-router-dom';
 import MarkerManager from '../../util/marker_manager';
 
 class SitterMap extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.updateBounds = this.updateBounds.bind(this);
+  }
+
   componentDidMount() {
 
     const mapOptions = {
@@ -12,14 +18,27 @@ class SitterMap extends React.Component {
     };
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
-
     this.MarkerManager = new MarkerManager(this.map);
-    
-    this.MarkerManager.updateMarkers(this.props.sitters);
+
+    this.map.addListener('idle', this.updateBounds);
   }
 
-  componentDidUpdate() {
-    this.MarkerManager.updateMarkers(this.props.sitters);
+  updateBounds() {
+    let latLngBounds = this.map.getBounds();
+
+    let ne = latLngBounds.getNorthEast();
+    let sw = latLngBounds.getSouthWest();
+
+    this.props.updateBounds({
+      north: ne.lat(),
+      east: ne.lng(),
+      south: sw.lat(),
+      west: sw.lng()
+    });
+  }
+
+  componentWillReceiveProps(newProps) {
+    this.MarkerManager.updateMarkers(newProps.sitters);
   }
 
   render() {

@@ -5,7 +5,7 @@ import SitterMap from './../sitter_map/sitter_map';
 
 class Search extends React.Component {
   componentDidMount() {
-  
+
     this.props.fetchSitters();
   }
 
@@ -19,6 +19,7 @@ class Search extends React.Component {
         />
         <SitterMap
           sitters={this.props.sitters}
+          updateBounds={this.props.updateBounds}
         />
       </div>
     );

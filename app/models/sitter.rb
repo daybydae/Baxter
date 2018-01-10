@@ -18,6 +18,16 @@ class Sitter < ApplicationRecord
   # }
   #... query logic goes here
 
+  lat_low = bounds["southWest"]["lat"].to_f
+  lat_high = bounds["northEast"]["lat"].to_f
+  lng_low = bounds["southWest"]["lng"].to_f
+  lng_high = bounds["northEast"]["lng"].to_f
+  
+  Sitter.all.select { |sitter| sitter.in_bounds?(lat_low, lat_high, lng_low, lng_high)}
+
   end
 
+  def in_bounds?(lat_low, lat_high, lng_low, lng_high)
+    self.lat.between?(lat_low, lat_high) && self.lng.between?(lng_low, lng_high)
+  end
 end

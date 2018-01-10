@@ -5,7 +5,7 @@ class Api::SittersController < ApplicationController
   end
 
   def index
-    @sitters = Sitter.all
+    @sitters = Sitter.in_bounds(params[:bounds])
   end
 
   def create

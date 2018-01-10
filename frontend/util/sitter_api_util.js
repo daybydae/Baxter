@@ -1,8 +1,19 @@
 
-export const fetchSitters = () => {
+export const fetchSitters = (filters) => {
+  let bounds;
+  if (filters){
+    bounds = filters.bounds;
+  } else {
+    bounds = {
+      northEast: {lat: 40.873106, lng: -73.879454},
+      southWest : {lat: 40.708831, lng: -74.031889}
+    };
+  }
+
   return $.ajax({
     method: 'get',
-    url: 'api/sitters'
+    url: 'api/sitters',
+    data: { bounds }
   });
 };
 
