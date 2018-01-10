@@ -12,8 +12,12 @@ export const logout = () => dispatch => {
   return SessionApiUtil.logout().then( () => dispatch(receiveCurrentUser(null)), errors => dispatch(receiveErrors(errors)));
 };
 
-export const signup = (user) => dispatch => {
-  return SessionApiUtil.signup(user).then( user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors)));
+export const signup = (formData) => dispatch => {
+  return SessionApiUtil.signup(formData).then( user => {
+
+    debugger
+    dispatch(receiveCurrentUser(user));
+  }, errors => dispatch(receiveErrors(errors)));
 };
 
 export const receiveCurrentUser = user => {

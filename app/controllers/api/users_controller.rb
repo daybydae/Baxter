@@ -1,6 +1,5 @@
 class Api::UsersController < ApplicationController
   def create
-
     @user = User.new(user_params)
 
     @user.lat = 40.751378
@@ -21,6 +20,6 @@ class Api::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :email, :address, :lat, :lng)
+    params.require(:user).permit(:username, :password, :email, :address, :lat, :lng, :image)
   end
 end

@@ -1,8 +1,14 @@
-export const signup = (user) => {
+import { receiveCurrentUser } from "../actions/session_actions";
+
+export const signup = (formData) => {
   return $.ajax({
     method: 'post',
     url: 'api/user',
-    data: { user }
+    dataType: "json",
+    contentType: false,
+    processData: false,
+    data: formData,
+
   });
 };
 
