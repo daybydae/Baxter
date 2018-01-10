@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchSitters: () => dispatch(fetchSitters()),
+    fetchSitters: (filters) => dispatch(fetchSitters(filters)),
     updateBounds: (bounds) => dispatch(updateBounds(bounds))
   };
 };
