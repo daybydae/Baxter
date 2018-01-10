@@ -45,6 +45,24 @@ Sitter.create!(
   lng: -73.946484,
 )
 
+Sitter.create!(
+  sittername: "Kati",
+  location: "315 E 105th Street, New York, NY 10029",
+  rates: 85.00,
+  description: 'Cool guy who loves to help Dae',
+  lat: 25,
+  lng: -50
+)
+
+Sitter.create!(
+  sittername: "Jeremiah",
+  location: "315 East 95th Street, New York, NY 10029",
+  rates: 95.00,
+  description: 'Cool guy who loves to help Dae',
+  lat: 10,
+  lng: -20,
+)
+
 User.create!(
   username: 'dae',
   password: 'daedae',

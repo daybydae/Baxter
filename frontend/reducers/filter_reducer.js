@@ -1,4 +1,4 @@
-import { UPDATE_BOUNDS } from '../actions/filter_actions';
+import { UPDATE_FILTER } from '../actions/filter_actions';
 import merge from 'lodash/merge';
 
 const initialState = {
@@ -8,10 +8,9 @@ const initialState = {
 const filterReducer = (oldState = initialState, action) => {
   Object.freeze(oldState);
   switch (action.type) {
-    case UPDATE_BOUNDS:
-      let newState = merge({}, oldState);
-      newState.bounds = action.bounds;
-      return newState;
+    case UPDATE_FILTER:
+      let newFilter = {[action.filter]: action.value};
+      return merge({}, oldState, newFilter);
     default:
       return oldState;
   }

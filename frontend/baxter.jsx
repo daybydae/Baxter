@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.receiveCurrentUser = receiveCurrentUser;
 
-  window.fetchSitters = fetchSitters;
+
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);

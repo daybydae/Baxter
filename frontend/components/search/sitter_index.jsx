@@ -3,7 +3,6 @@ import SitterIndexItem from './sitter_index_item';
 
 class SitterIndex extends React.Component {
 
-
   render () {
     return (
       <div className="index">

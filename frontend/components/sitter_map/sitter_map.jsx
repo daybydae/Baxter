@@ -29,7 +29,7 @@ class SitterMap extends React.Component {
     let ne = latLngBounds.getNorthEast();
     let sw = latLngBounds.getSouthWest();
 
-    this.props.updateBounds({
+    this.props.updateFilter('bounds', {
       north: ne.lat(),
       east: ne.lng(),
       south: sw.lat(),

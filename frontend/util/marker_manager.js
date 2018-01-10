@@ -11,11 +11,27 @@ class MarkerManager extends React.Component {
 
   updateMarkers(sitters) {
 
+    const sittersObj = {};
+
+    sitters.forEach( (sitter) => {
+      sittersObj[sitter.id] = sitter;
+    });
+
     sitters.forEach( (sitter) => {
       if (!this.markers[sitter.id]) {
         this.createMarkerFromSitter(sitter);
       }
     });
+
+    Object.keys(this.markers)
+      .filter(sitterId => !sittersObj[sitterId])
+      .forEach((sitterId) => this.removeMarker(this.markers[sitterId]));
+
+  }
+
+  removeMarker(marker) {
+    this.markers[marker.sitterId].setMap(null);
+    delete this.markers[marker.sitterId];
   }
 
   createMarkerFromSitter(sitter) {

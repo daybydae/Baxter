@@ -5,7 +5,9 @@ class Api::SittersController < ApplicationController
   end
 
   def index
-    @sitters = Sitter.in_bounds(params[:bounds])
+
+    @sitters = bounds ? Sitter.in_bounds(bounds) : Sitter.all
+    # render :index
   end
 
   def create
@@ -17,6 +19,12 @@ class Api::SittersController < ApplicationController
       render json: @sitter.errors.full_messages, status: 422
     end
 
+  end
+
+  private
+
+  def bounds
+    params[:bounds]
   end
 
   def sitter_params

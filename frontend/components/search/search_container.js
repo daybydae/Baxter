@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Search from './search';
 import { fetchSitters } from '../../actions/sitter_actions';
-import { updateBounds } from '../../actions/filter_actions';
+import { updateFilter } from '../../actions/filter_actions';
 
 const mapStateToProps = (state) => {
 
@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchSitters: (filters) => dispatch(fetchSitters(filters)),
-    updateBounds: (bounds) => dispatch(updateBounds(bounds))
+    updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
   };
 };
 

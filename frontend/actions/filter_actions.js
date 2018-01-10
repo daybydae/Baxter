@@ -1,8 +1,18 @@
-export const UPDATE_BOUNDS = "UPDATE_BOUNDS";
+import { fetchSitters } from './sitter_actions';
 
-export const updateBounds = (bounds) => {
+export const UPDATE_FILTER = "UPDATE_FILTER";
+
+export const changeFilter = (filter, value) => {
+
   return {
-    type: UPDATE_BOUNDS,
-    bounds
+    type: UPDATE_FILTER,
+    filter,
+    value
   };
+};
+
+export const updateFilter = (filter, value) => (dispatch, getState) => {
+  dispatch(changeFilter(filter, value));
+
+  return fetchSitters(getState().filter)(dispatch);
 };

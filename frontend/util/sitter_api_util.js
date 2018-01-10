@@ -1,12 +1,15 @@
 
 export const fetchSitters = (filters) => {
+
   let bounds;
-  if (filters){
+  if (filters) {
     bounds = filters.bounds;
   } else {
     bounds = {
-      northEast: {lat: 40.873106, lng: -73.879454},
-      southWest : {lat: 40.708831, lng: -74.031889}
+      north: 40.792706,
+      south: 40.780294,
+      east: -73.937692,
+      west : -73.985414
     };
   }
 
