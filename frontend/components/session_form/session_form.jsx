@@ -8,9 +8,13 @@ class SessionForm extends React.Component {
       email: "",
       password: "",
       username: "",
-      address: ""
+      address: "",
+      imageFile: null,
+      imageUrl: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateFile = this.updateFile.bind(this);
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -27,6 +31,18 @@ class SessionForm extends React.Component {
     return e => {
       this.setState({ [field]: e.currentTarget.value });
     };
+  }
+
+  updateFile(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
+    };
+
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
   }
 
   handleSubmit(e) {
@@ -86,6 +102,15 @@ class SessionForm extends React.Component {
             />
           </label>
 
+          <label className = "session-form-label">Upload a Profile Picture:
+            <br />
+            <input
+              type="file"
+              onChange={this.updateFile}
+              className="login-input"
+            />
+          </label>
+          <img src={this.state.imageUrl} />
         </ul>
       );
     }
