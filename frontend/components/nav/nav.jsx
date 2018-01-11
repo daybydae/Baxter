@@ -57,15 +57,18 @@ class Nav extends React.Component {
                     <img
                       className="profile-icon"
                       src={this.props.currentUser.image_url}
-                      />
+                    />
                   </div>
-                  {this.props.currentUser.username}
-                  <span className="caret">
 
-                    <i className="fas fa-caret-down fa-xs"></i>
-                  </span>
                 </button>
+                <div className="username-nav">
 
+                  {this.props.currentUser.username}
+                </div>
+                <span className="caret">
+
+                  <i className="fas fa-caret-down fa-xs"></i>
+                </span>
               </div>
 
                 <ul className="header-dropdown-content" id="dropdown">

@@ -17,8 +17,14 @@
 
 .dropbtn {
   font-size: 14px;
-
+  display: flex;
 }
+
+.username-nav {
+  display: inline-block;
+  margin-top: 1px;
+}
+
 .header-login-signup-links {
   color: #777;
   font-size: 14px;
@@ -77,9 +83,10 @@
 
 .profile-icon {
   position: relative;
-  width: 15px;
+  width: 24px;
+  height: 24px;
   margin-right: 10px;
-  margin-bottom: -2px;
+
 }
 
 .profile-icon-box {
@@ -126,10 +133,9 @@ a:hover, Link:hover, button:hover {
 }
 
 .caret {
-  padding: 5px;
-
+  padding-top: 1px;
+  padding-left: 6px;
 }
-
 .show {
   display: block;
   position: absolute;
@@ -140,7 +146,7 @@ a:hover, Link:hover, button:hover {
 .nav-right-box {
   overflow: hidden;
   position: relative;
-  display: block;
+  display: flex;
   padding: 14px 10px 11px;
   height: 100%;
   border: 1px solid #fff;
