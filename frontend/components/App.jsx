@@ -1,6 +1,7 @@
 import React from 'react';
 import NavContainer from './nav/nav_container';
 import SessionFormContainer from './session_form/session_form_container';
+import BookingFormContainer from './bookings/booking_form_container';
 
 import SitterShowContainer from './sitter_show/sitter_show_container';
 
@@ -54,9 +55,10 @@ class App extends React.Component {
             <div className='main-content'>
               <AuthRoute exact path="/login" component={SessionFormContainer} />
               <AuthRoute path="/signup" component={SessionFormContainer} />
-              <Route path="/sitters/:sitterId" component={SitterShowContainer} />
+              <Route exact path="/sitters/:sitterId" component={SitterShowContainer} />
               <Route exact path="/" component={SearchContainer} />
               <ProtectedRoute exact path="/users/:userId" component={UserShowContainer} />
+              <ProtectedRoute exact path="/sitters/:sitter_id/bookings" component={BookingFormContainer} />
 
             </div>
 

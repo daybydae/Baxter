@@ -1,4 +1,4 @@
-class Api::SittersController < ApplicationController
+class Api::BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
@@ -10,6 +10,7 @@ class Api::SittersController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user_id = current_user.id
 
     if @booking.save
       render :show
