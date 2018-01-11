@@ -60,15 +60,15 @@ class Nav extends React.Component {
                     />
                   </div>
 
+                  <div className="username-nav">
+
+                    {this.props.currentUser.username}
+                  </div>
+                  <span className="caret">
+
+                    <i className="fas fa-caret-down fa-xs"></i>
+                  </span>
                 </button>
-                <div className="username-nav">
-
-                  {this.props.currentUser.username}
-                </div>
-                <span className="caret">
-
-                  <i className="fas fa-caret-down fa-xs"></i>
-                </span>
               </div>
 
                 <ul className="header-dropdown-content" id="dropdown">
