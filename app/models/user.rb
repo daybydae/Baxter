@@ -23,9 +23,15 @@ class User < ApplicationRecord
   validates :username, :password_digest, :session_token, :email, presence: true
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
-
+  validates :bookings, presence: true
+  
   has_attached_file :image, default_url: "bulldog.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
+  # has_many :favorites
+
+  has_many :bookings, through: :bookings,
+    source: :sitter
 
   after_initialize :ensure_session_token
 

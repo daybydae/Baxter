@@ -24,10 +24,9 @@ class Sitter < ApplicationRecord
   has_attached_file :image, default_url: "pug.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  # has_many :favorites,
-  # has_many: :favorite_users,
-  #   through: :favorites,
-  #   source: :user
+
+  has_many :bookings
+
 
   def self.in_bounds(bounds)
 
@@ -36,7 +35,7 @@ class Sitter < ApplicationRecord
     lng_low = bounds["west"].to_f
     lng_high = bounds["east"].to_f
     Sitter.all.select { |sitter| sitter.in_bounds?(lat_low, lat_high, lng_low, lng_high)}
-    
+
   end
 
   def in_bounds?(lat_low, lat_high, lng_low, lng_high)

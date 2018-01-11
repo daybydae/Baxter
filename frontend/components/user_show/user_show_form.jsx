@@ -9,12 +9,11 @@ class UserShowForm extends React.Component {
     super(props);
     this.state = this.props.currentUser;
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
     this.props.updateUser(this.state);
   }
 
