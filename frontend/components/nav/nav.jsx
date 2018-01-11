@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 
+
 class Nav extends React.Component {
   constructor(props) {
     super(props);
@@ -22,9 +23,7 @@ class Nav extends React.Component {
   }
 
   handleClick(e) {
-    e.preventDefault();
-    document.getElementById("dropdown").classList.toggle("show");
-    document.getElementById("dropdown-profile").classList.toggle("myClickState");
+    this.props.toggleDropdown();
   }
 
   userNavLinks() {
@@ -46,12 +45,15 @@ class Nav extends React.Component {
         </nav>
       );
     } else {
+      const dropDownClasses = this.props.dropDownOpen ? "header-dropdown-content show" : "header-dropdown-content";
+      const dropDownProfileClasses = this.props.dropDownOpen ? "nav-right-box myClickState" : "nav-right-box";
+
       return (
         <nav className="header-login-signup-links">
           <ul className="nav-right">
 
             <li className="profile-box">
-              <div className="nav-right-box" id="dropdown-profile">
+              <div className={dropDownProfileClasses} id="dropdown-profile">
                 <button className="dropbtn" onClick={this.handleClick}>
                   <div className="profile-icon-box">
                     <img
@@ -71,7 +73,7 @@ class Nav extends React.Component {
                 </button>
               </div>
 
-                <ul className="header-dropdown-content" id="dropdown">
+                <ul className={dropDownClasses} id="dropdown">
                   <li>
                     <Link to={'/user'}>
                         Dashboard

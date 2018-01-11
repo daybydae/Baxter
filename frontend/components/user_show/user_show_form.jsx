@@ -14,13 +14,10 @@ class UserShowForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updateUser(this.update("description"));
+    debugger
+    this.props.updateUser(this.state);
   }
 
-  handleChange(e) {
-    e.preventDefault();
-    this.props.updateUser(this.update("description"));
-  }
 
   update(field) {
     return e => {
@@ -55,7 +52,7 @@ class UserShowForm extends React.Component {
 
         <form onSubmit={this.handleSubmit} className="add-description-form">
 
-          <textarea className="description-text" onChange={this.handleChange}>
+          <textarea className="description-text" onChange={this.update("description")}>
 
           </textarea>
 
