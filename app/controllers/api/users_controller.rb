@@ -14,10 +14,10 @@ class Api::UsersController < ApplicationController
   end
 
   def update
-    @user = User.find_by(params[:id])
-    if (currentUser.id != @user.id)
+    @user = User.find(params[:id])
+    if current_user.id != @user.id
       render json: ["You cannot access this user's show page"]
-    elsif (@user.update(user_params))
+    elsif @user.update_attributes(user_params)
       render :show
     else
       render json: @user.errors.full_messages, status: 422
@@ -25,12 +25,12 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(params[:id])
+    @user = User.find(params[:id])
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :email, :address, :lat, :lng, :image)
+    params.require(:user).permit(:username, :password, :email, :address, :lat, :lng, :image, :description)
   end
 end

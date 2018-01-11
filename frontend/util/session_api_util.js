@@ -1,4 +1,3 @@
-import { receiveCurrentUser } from "../actions/session_actions";
 
 export const signup = (formData) => {
   return $.ajax({

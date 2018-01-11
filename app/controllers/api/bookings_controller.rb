@@ -11,7 +11,7 @@ class Api::SittersController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
 
-    if @booking.save!
+    if @booking.save
       render :show
     else
       render json: @booking.errors.full_messages, status: 422

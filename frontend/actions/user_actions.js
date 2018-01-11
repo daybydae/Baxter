@@ -1,5 +1,5 @@
 import * as UserApiUtil from '../util/user_api_util';
-import { receiveCurrentUser, receiveErrors } from '../util/session_api_util';
+import { receiveCurrentUser, receiveErrors } from '../actions/session_actions';
 
 
 export const updateUser = (user) => dispatch => {

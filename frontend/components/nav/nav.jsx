@@ -75,7 +75,7 @@ class Nav extends React.Component {
 
                 <ul className={dropDownClasses} id="dropdown">
                   <li>
-                    <Link to={'/user'}>
+                    <Link to={`/users/${this.props.currentUser.id}`}>
                         Dashboard
                     </Link>
                   </li>
