@@ -1,0 +1,132 @@
+.main-content {
+}
+
+.hero-container-user {
+  background-color: #ebeeef;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 80%;
+  height: 625px;
+}
+
+.main-content-user-show {
+  padding-top: 40px;
+  background-color: #ebeeef !important;
+
+  display: block;
+  min-width: -webkit-fill-available;
+  position: absolute;
+  min-height: 100vh;
+}
+
+.col-three-fifths {
+  width: 66.67%;
+  padding: 20px;
+  box-shadow: 0 3px 0 #ddd;
+  background: #fff;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  margin-left: 25px;
+}
+.user_show_profile_box {
+
+  display: flex;
+}
+
+.inner-profile-right {
+  padding-left: 20px;
+  margin: 10px;
+  height: 65%;
+}
+
+.member-profile-hero-wrap{
+
+}
+
+.profile-pic-box {
+
+  box-shadow: 0 3px 0 #ddd;
+  background: #fff;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.profile-description {
+    flex: right;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.profile-pic {
+
+
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.col-two-fifths {
+  max-width: 40%;
+  float: left;
+}
+
+.widget-body {
+  padding: 20px;
+}
+
+.update-user-form {
+
+}
+
+.description-form {
+  margin-right: 25px;
+}
+
+.description-header {
+
+}
+
+.add-description-form {
+
+}
+
+.description-text {
+  border: 1px solid #ddd;
+  min-height: 100px;
+  width: 100%;
+  margin-bottom: 25px;
+  text-align:left;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px;
+  
+}
+
+.username {
+  font-size: 35px;
+  font-weight: 500;;
+}
+
+.form-submit-button-user {
+  display:block;
+  background: #00bd70;
+  border-color: #00bd70;
+  color: #fff;
+  width: 100%;
+  padding: 10px 0px;
+  line-height: 1.6;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 16px;
+
+}

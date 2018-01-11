@@ -1,19 +1,21 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import UserShow from './user_show';
-import { fetchSitter } from '../../actions/sitter_actions';
+import { updateUser } from '../../actions/user_actions';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
 
-  const sitterId = parseInt(ownProps.match.params.sitterId);
   return {
-    sitter: state.entities.sitters[sitterId] || {}
+    currentUser: state.session.currentUser,
+    
   };
+
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchSitter: (sitterId) => dispatch(fetchSitter(sitterId))
+    updateUser: (user) => dispatch(updateUser(user))
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserShow);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(UserShow));

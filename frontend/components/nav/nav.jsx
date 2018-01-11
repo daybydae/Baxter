@@ -69,7 +69,11 @@ class Nav extends React.Component {
               </div>
 
                 <ul className="header-dropdown-content" id="dropdown">
-                  <li><a href="#">Dashboard</a></li>
+                  <li>
+                    <Link to={'/user'}>
+                        Dashboard
+                    </Link>
+                  </li>
                   <li><a href="#">Settings</a></li>
                   <li className="divider"></li>
                   <li><button className="logout-button" onClick={this.handleLogout}>

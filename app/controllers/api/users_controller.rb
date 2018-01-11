@@ -13,6 +13,17 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find_by(params[:id])
+    if (currentUser.id != @user.id)
+      render json: ["You cannot access this user's show page"]
+    elsif (@user.update(user_params))
+      render :show
+    else
+      render json: @user.errors.full_messages, status: 422
+    end
+  end
+
   def show
     @user = User.find_by(params[:id])
   end
