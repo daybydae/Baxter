@@ -110,8 +110,8 @@ abby = Sitter.new(
   location: "177 Abbay Street, New York, NY 10029",
   rates: 105.00,
   description: "I'm a super cool girl who loves to help Dae. Also, I'm the other half of the 'Dream Team'.",
-  lat: 40.745010,
-  lng: -73.253987,
+  lat: 40.798192,
+  lng: -73.951843,
 )
 file = File.open("app/assets/images/abby.jpg")
 abby.image = file
