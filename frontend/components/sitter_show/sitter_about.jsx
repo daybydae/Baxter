@@ -20,7 +20,7 @@ const SitterAbout = ({ sitter }) => {
         </div>
         <div className="section-col-main">
           <h4>
-            Need to add description title column to sitters model
+            Description
           </h4>
           <div className="sitter-description">
             <p>

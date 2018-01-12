@@ -13,23 +13,26 @@ class IndexItem extends React.Component {
 
     const { sittername, rates, description } = this.props.sitter;
     return (
-      <Link to={`sitters/${this.props.sitter.id}`}>
-        <div className="index-item-info">
-          <span className="index-item-category">Name</span>
+      <div >
+        <Link to={`sitters/${this.props.sitter.id}`} className="sitter-item-link">
+          <div className="index-item-info">
+            <span className="index-item-category">Name</span>
             <span className="index-item-value">
               { sittername }
             </span>
-          <span className="index-item-category">Rates</span>
+            <span className="index-item-category">Rates</span>
             <span className="index-item-value">
               { rates }
             </span>
-          <span className="index-item-category">Description</span>
+            <span className="index-item-category">Description</span>
             <span className="index-item-value">
               { description || ""}
             </span>
-        </div>
+          </div>
 
-      </Link>
+        </Link>
+
+      </div>
     );
   }
 }

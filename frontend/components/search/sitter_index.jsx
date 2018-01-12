@@ -6,15 +6,16 @@ class SitterIndex extends React.Component {
   render () {
     return (
       <div className="index">
-        <h1>Sitters: </h1>
-        <ul>
+        <ul className="">
           {
             this.props.sitters.map( sitter => {
               return (
-                <SitterIndexItem
-                  key={sitter.id}
-                  sitter={sitter}
-                  />
+                <li className="sitter-item-box">
+                  <SitterIndexItem
+                    key={sitter.id}
+                    sitter={sitter}
+                    />
+                </li>
               );
             })
           }

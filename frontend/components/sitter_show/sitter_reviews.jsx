@@ -49,9 +49,7 @@ const SitterReviews = ({ sitter }) => {
               <div className="review-body">
                 <div className="review-description">
                   <p>
-                    {
-                    // review.description
-                    }
+                    {sitter.description}
                   </p>
                 </div>
               </div>

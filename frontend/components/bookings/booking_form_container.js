@@ -5,9 +5,8 @@ import { fetchSitter } from '../../actions/sitter_actions';
 import BookingForm from './booking_form';
 
 const mapStateToProps = (state, ownProps) => {
-
   return {
-    currentUser: state.currentUser,
+    currentUser: state.session.currentUser,
     sitter: state.entities.sitters[ownProps.match.params.sitter_id] || {}
   };
 };

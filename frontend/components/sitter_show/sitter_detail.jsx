@@ -20,7 +20,9 @@ const SitterDetail = ({ sitter }) => {
               <strong>{sitter.sittername}</strong>
             </div>
             <div className="sitter-neighborhood">
-              Hood
+
+                {sitter.location}
+
             </div>
             <div className="sitter-rating-profile">
               RATING
@@ -92,7 +94,7 @@ const SitterDetail = ({ sitter }) => {
           </div>
 
           <div className="contact-button-col">
-            <Link to={"/"} className="contact-button">
+            <Link to={`/sitters/${sitter.id}/bookings`} className="contact-button">
               Contact {sitter.sittername}
             </Link>
           </div>

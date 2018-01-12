@@ -1,5 +1,17 @@
+.index {
+
+}
+
+.sitter-item-box {
+  border: 1px solid #ddd;
+}
+
 .sitter-item-index {
   cursor: pointer;
+
+}
+
+.sitter-item-link {
 
 }
 
@@ -18,5 +30,6 @@
 }
 
 .index {
+  height: 100%;
   background: white;
 }

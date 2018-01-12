@@ -10,18 +10,21 @@
 .sitter-summary-media {
   margin-top: 0;
   overflow: hidden;
+  display: flex;
+
 }
 
 .sitter-show-profile-icon {
   float: left!important;
   margin-right: 10px;
+  height: 100%;
 }
 
 .sitter-profile-icon {
   vertical-align: middle;
   border-radius: 4px;
-  height: 64px;
-  width: 64px;
+  height: 90px;
+  width: 90px;
 }
 
 .media-body {
@@ -34,11 +37,13 @@
 }
 
 .sitter-neighborhood {
-
+  font-weight: 400;
+  font-size: 12px;
 }
 
 .sitter-rating-profile {
-
+  font-weight: 400;
+  font-size: 12px;
 }
 
 .sitter-services-wrap {
@@ -192,4 +197,8 @@ label {
 .favorited-state {
   display: none;
 
+}
+
+.sitter-description-wrap {
+  margin-top: 25px;
 }

@@ -9,7 +9,6 @@ class BookingForm extends React.Component {
       end_date: "",
       sitter_id: this.props.match.params.sitter_id,
     };
-
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -21,8 +20,6 @@ class BookingForm extends React.Component {
     e.preventDefault();
     this.props.createBooking(this.state).then( booking => {
       this.props.history.push('/');
-    }, errors => {
-      debugger
     });
   }
 
@@ -35,16 +32,86 @@ class BookingForm extends React.Component {
 
   render () {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit} className="booking-form">
+      <div className="form-box-booking">
 
-          <input type="date" value={this.state.start_date} onChange={this.handleChange("start_date")}/>
-          <input type="date" value={this.state.end_date} onChange={this.handleChange("end_date")}/>
+        <div className="booking-form-box">
+          <div className="sidebar-main">
 
-          <input type="submit" className="submit-booking-form" value="submit"/>
+            <form onSubmit={this.handleSubmit} className="booking-form">
+              <div className="search-section">
+                <div className="heading">
+                  Service Type
+                </div>
+              </div>
 
-        </form>
+              <div className="search-service">
+                Dog Sitting at the Sitter's Home
+              </div>
 
+              <div className="search-section">
+                <div className="heading">
+                  Dog Sitting near
+                </div>
+                <input
+                  type="text"
+                  value={this.props.currentUser.address}
+                  onChange={this.handleChange("address")}
+                  className="form-control"
+                  />
+              </div>
+              <div>
+                <div>
+                  <div className="search-section">
+                    <div className="heading">
+                      Dates
+                    </div>
+                    <div className="search-date-view">
+                      <div className="date-range-picker">
+
+                        <div className="date-box">
+                          <div className="input-group-wrapper">
+                            <div className="input-group">
+
+                              <input
+                                type="date"
+                                value={this.state.start_date}
+                                onChange={this.handleChange("start_date")}
+                                className="date"
+                                />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="date-picker-control-divider">
+                          <i className="fas fa-long-arrow-alt-right"></i>
+                        </div>
+                        <div className="date-box">
+                          <div className="input-group-wrapper">
+                            <div className="input-group">
+
+                              <input
+                                type="date"
+                                value={this.state.end_date}
+                                onChange={this.handleChange("end_date")}
+                                className="date"
+                                />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <input type="submit"
+                  className="submit-booking-form-button button"
+                  value="Submit"
+                  />
+              </div>
+
+
+            </form>
+          </div>
+
+        </div>
       </div>
     );
   }
