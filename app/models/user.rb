@@ -25,7 +25,7 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }, allow_nil: true
   # validates :bookings
 
-  has_attached_file :image, default_url: "bulldog.png"
+  has_attached_file :image, default_url: "bulldog.png", styles: {thumb: "500x500#"}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   # has_many :favorites

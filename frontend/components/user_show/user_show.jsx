@@ -20,7 +20,7 @@ class UserShow extends React.Component {
                 <div className="widget-body">
                   <img
                     className="profile-pic"
-                    src={this.props.currentUser.image_url}
+                    src={this.props.currentUser.image_thumb}
                     />
 
                 </div>

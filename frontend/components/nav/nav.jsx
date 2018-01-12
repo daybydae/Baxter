@@ -13,7 +13,7 @@ class Nav extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login({email: "demo@gmail.com", password: "demo"});
+    this.props.login({email: "demo@gmail.com", password: "daedae"});
   }
 
   handleLogout(e) {

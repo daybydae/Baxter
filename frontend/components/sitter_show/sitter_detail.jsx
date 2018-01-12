@@ -12,7 +12,7 @@ const SitterDetail = ({ sitter }) => {
           <span className="sitter-show-profile-icon">
             <img
               className="sitter-profile-icon"
-              src={sitter.image_url}
+              src={sitter.image_thumb}
             />
           </span>
           <div className="media-body">

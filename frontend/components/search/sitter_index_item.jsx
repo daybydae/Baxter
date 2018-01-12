@@ -19,7 +19,7 @@ class IndexItem extends React.Component {
           <div className="sitter-card">
             <div className="profile-pic-box-sitter">
               <img className="profile-pic-index"
-              src={this.props.sitter.image_url}
+              src={this.props.sitter.image_thumb}
               />
             </div>
 
