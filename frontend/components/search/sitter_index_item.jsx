@@ -11,28 +11,50 @@ class IndexItem extends React.Component {
 
   render () {
 
-    const { sittername, rates, description } = this.props.sitter;
-    return (
-      <div >
-        <Link to={`sitters/${this.props.sitter.id}`} className="sitter-item-link">
-          <div className="index-item-info">
-            <span className="index-item-category">Name</span>
-            <span className="index-item-value">
-              { sittername }
-            </span>
-            <span className="index-item-category">Rates</span>
-            <span className="index-item-value">
-              { rates }
-            </span>
-            <span className="index-item-category">Description</span>
-            <span className="index-item-value">
-              { description || ""}
-            </span>
-          </div>
+    const { sittername, rates, description, location } = this.props.sitter;
 
+    return (
+
+        <Link to={`sitters/${this.props.sitter.id}`} className="sitter-item-link">
+          <div className="sitter-card">
+            <div className="profile-pic-box-sitter">
+              <img className="profile-pic-index"
+              src={this.props.sitter.image_url}
+              />
+            </div>
+
+            <div className="index-item-info">
+              <div className="list-num">
+                {this.props.num + 1}.
+              </div>
+
+              <div className="index-item-name">
+                { sittername }
+              </div>
+
+              <div className="index-item-rate">
+                <div className="text-muted-index">
+                  from
+                </div>
+                <div className="rate">
+                  ${ rates }
+                </div>
+                <div className="text-muted-index">
+                  per night
+                </div>
+              </div>
+
+              <div className="index-item-address">
+                { location }
+              </div>
+
+              <div className="index-item-description">
+                { description || ""}
+              </div>
+            </div>
+          </div>
         </Link>
 
-      </div>
     );
   }
 }

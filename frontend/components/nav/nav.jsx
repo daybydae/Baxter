@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 class Nav extends React.Component {
   constructor(props) {
     super(props);
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -14,7 +13,7 @@ class Nav extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login({email: "dae@gmail.com", password: "daedae"});
+    this.props.login({email: "demo@gmail.com", password: "demo"});
   }
 
   handleLogout(e) {

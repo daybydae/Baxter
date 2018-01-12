@@ -8,12 +8,13 @@ class SitterIndex extends React.Component {
       <div className="index">
         <ul className="">
           {
-            this.props.sitters.map( sitter => {
+            this.props.sitters.map( (sitter, idx) => {
               return (
-                <li className="sitter-item-box">
+                <li className="sitter-item-box" key={idx}>
                   <SitterIndexItem
                     key={sitter.id}
                     sitter={sitter}
+                    num={idx}
                     />
                 </li>
               );

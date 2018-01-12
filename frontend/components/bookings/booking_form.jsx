@@ -9,6 +9,12 @@ class BookingForm extends React.Component {
       end_date: "",
       sitter_id: this.props.match.params.sitter_id,
     };
+
+    if (this.props.currentUser) {
+      this.address = this.props.currentUser.address;
+    } else {
+      this.address = "10018";
+    }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -54,8 +60,8 @@ class BookingForm extends React.Component {
                 </div>
                 <input
                   type="text"
-                  value={this.props.currentUser.address}
-                  onChange={this.handleChange("address")}
+                  value={this.address}
+                  onChange={this.handleChange(this.address)}
                   className="form-control"
                   />
               </div>

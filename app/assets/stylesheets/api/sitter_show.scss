@@ -63,7 +63,7 @@
   height: 100%;
   border-radius: 4px;
   box-shadow: 0 3px 0 #ddd;
-
+  border: 1px solid #ddd;
 }
 .member-profile-photos-row {
   content: " ";
@@ -74,7 +74,7 @@
 }
 
 .member-profile-photos-col {
-  height: 100%
+  height: 100%;
 }
 
 .hero-image {
@@ -90,7 +90,8 @@
 
 .member-profile-details-col {
   float:right;
-  width: 33.33%
+  width: 33.33%;
+  background: white;
 
 }
 

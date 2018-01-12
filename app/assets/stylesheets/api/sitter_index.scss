@@ -1,35 +1,75 @@
-.index {
-
-}
 
 .sitter-item-box {
   border: 1px solid #ddd;
 }
 
-.sitter-item-index {
-  cursor: pointer;
+.sitter-card {
+  padding: 15px;
+  position: relative;
+  display: flex;
+}
 
+.profile-pic-box-sitter {
+  position: relative;
+  margin-right: 15px;
+
+}
+
+.profile-pic-index {
+  vertical-align: middle;
+  height: 100px;
+  width: 100px;
 }
 
 .sitter-item-link {
-
+  cursor: pointer;
 }
 
 .index-item-info {
-
+  float:left;
+  width: 100%;
 }
 
-.index-item-category {
-
-
+.list-num {
+  font-size: 25px;
+  display: inline-block;
+  margin-right: 5px;
 }
 
-.index-item-value {
-
-
+.index-item-name {
+  font-size: 30px;
+  color: #14a4be;
+  font-weight: 700;
+  display: inline-block;
+  margin: 0;
+  bottom: 0;
 }
 
 .index {
   height: 100%;
   background: white;
+}
+
+.index-item-rate {
+  float:right;
+}
+
+.text-muted-index {
+  color: #999;
+  font-size: 11px;
+  text-align:center;
+}
+
+.rate {
+  font-weight:700;
+  color: #da6a18;
+  font-size: 25px;
+}
+
+.index-item-address {
+  font-size: 12px;
+}
+
+.index-item-description {
+  font-size: 16px;
 }
