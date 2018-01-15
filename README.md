@@ -1,36 +1,46 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 <h1> Baxter
 
 <h3> Summary
+Baxter is a single-page full-stack web application inspired by Rover built using Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend.
+
+Baxter enables users to search for dog sitters according to location, price, sitter availability, and other preferences, and allows them to send a request to book a dog sitter.
 
 [Baxter][https://aa-baxter.herokuapp.com/]
 
+
 <h3> Overall Structure
+
+
 
 <h3> Primary Components
 
 
+
+<h3> List of techs/languages/plugins/APIs 
+
+Backend
+
+
+* BCrypt
+* Paperclip/AWS
+* figaro
+* 
+
+Frontend
+
+* GoogleMap API
+* React.js
+* Flux
+* webpack
+* 
+
+<h3> Future of the App
+
+I would like to add/improve these future features:
+
+1. Have a distinct home page
+2. Improve Sitter profile page
+3. Improve User profile page
+4. Have a bookings page that displays past, current, and future bookings
+5. Add a reviews function
+6. Improve the Bookings component
