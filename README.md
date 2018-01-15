@@ -30,10 +30,16 @@ Backend
 Frontend
 
 * GoogleMap API
+* React DOM
+* React Router
+* jQuery
 * React.js
 * Flux
-* webpack
-* 
+* Webpack
+
+Hosting
+
+* Heroku platform
 
 <h3> Future of the App </h3>
 
