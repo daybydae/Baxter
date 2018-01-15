@@ -24,7 +24,8 @@ Backend
 * BCrypt
 * Paperclip/AWS
 * figaro
-* 
+* SQL
+* JSON 
 
 Frontend
 
