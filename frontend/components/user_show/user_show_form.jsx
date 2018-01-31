@@ -47,13 +47,12 @@ class UserShowForm extends React.Component {
       <div className="description-form">
 
         <h3 className="description-header">
-          Add a Description
+          Update Description
         </h3>
-
 
         <form onSubmit={this.handleSubmit} className="add-description-form">
 
-          <textarea className="description-text" onChange={this.update("description")}>
+          <textarea className="description-text" onChange={this.update("description")} value={this.state.description}>
 
           </textarea>
 
