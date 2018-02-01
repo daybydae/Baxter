@@ -1,7 +1,7 @@
 class Api::SittersController < ApplicationController
 
   def show
-    @sitter = Sitter.find(params[:id])
+    @sitter = Sitter.find(params[:id]) 
   end
 
   def index
