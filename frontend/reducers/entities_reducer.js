@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import sittersReducers from './sitters_reducer';
+import sitterReducer from './sitters_reducer';
 
 const entitiesReducer = combineReducers({
-  sitters: sittersReducers,
+  sitters: sitterReducer,
 });
 
 export default entitiesReducer;
