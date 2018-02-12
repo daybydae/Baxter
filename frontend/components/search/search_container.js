@@ -4,9 +4,8 @@ import { fetchSitters } from '../../actions/sitter_actions';
 import { updateFilter } from '../../actions/filter_actions';
 
 const mapStateToProps = (state) => {
-
   return {
-    sitters: Object.values(state.entities.sitters)
+    sitters: Object.values(state.entities.sitters),
   };
 };
 

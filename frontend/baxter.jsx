@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   window.getState = store.getState;
   window.receiveCurrentUser = receiveCurrentUser;
-
+  window.fetchSitters = fetchSitters;
 
 
   const root = document.getElementById('root');

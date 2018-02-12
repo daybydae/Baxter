@@ -55,8 +55,8 @@ class App extends React.Component {
             <div className='main-content'>
               <AuthRoute exact path="/login" component={SessionFormContainer} />
               <AuthRoute path="/signup" component={SessionFormContainer} />
-              <Route exact path="/sitters/:sitterId" component={SitterShowContainer} />
               <Route exact path="/" component={SearchContainer} />
+              <Route exact path="/sitters/:sitterId" component={SitterShowContainer} />
               <ProtectedRoute exact path="/users/:userId" component={UserShowContainer} />
               <ProtectedRoute exact path="/sitters/:sitter_id/bookings" component={BookingFormContainer} />
 
