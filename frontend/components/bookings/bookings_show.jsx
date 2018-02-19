@@ -2,6 +2,10 @@ import React from 'react';
 import BookingShow from './booking_show';
 
 class BookingsShow extends React.Component {
+  componentDidMount() {
+    debugger
+    this.props.fetchBookings(this.props.match.params.userId)
+  }
 
   render () {
     debugger

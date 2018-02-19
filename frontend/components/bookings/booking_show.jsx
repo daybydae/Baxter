@@ -14,7 +14,15 @@ class BookingShow extends React.Component {
     const { sitter_id, user_id, start_date, end_date } = this.props.booking;
 
     return (
-      <div>Hey
+      <div>
+        <div>{sitter_id}
+        </div>
+        <div>{user_id}
+        </div>
+        <div>{start_date}
+        </div>
+        <div>{end_date}
+        </div>
       </div>
         // <Link to={`sitters/${this.props.sitter.id}`} className="sitter-item-link">
         //   <div className="sitter-card">
