@@ -5,10 +5,10 @@ class BookingsShow extends React.Component {
   componentDidMount() {
     debugger
     this.props.fetchBookings(this.props.match.params.userId)
+    this.props.fetchAllSitters();
   }
 
   render () {
-    debugger
 
     if (Object.keys(this.props.bookings).length !== 0) {
       return (

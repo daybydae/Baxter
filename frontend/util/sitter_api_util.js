@@ -1,3 +1,9 @@
+export const fetchAllSitters = () => {
+  return $.ajax({
+    method: 'get',
+    url: 'api/sitters',
+  });
+};
 
 export const fetchSitters = (filters) => {
 

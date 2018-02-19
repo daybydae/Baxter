@@ -3,7 +3,7 @@ import { merge } from 'lodash';
 
 const bookingsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
-  debugger
+  
   switch (action.type) {
     case RECEIVE_ALL_BOOKINGS:
       return action.bookings;

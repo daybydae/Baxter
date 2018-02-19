@@ -24,7 +24,7 @@ class BookingShow extends React.Component {
         <div>{end_date}
         </div>
       </div>
-        // <Link to={`sitters/${this.props.sitter.id}`} className="sitter-item-link">
+        // <Link to={`sitters/${sitter_id}`} className="sitter-item-link">
         //   <div className="sitter-card">
         //     <div className="profile-pic-box-sitter">
         //       <img className="profile-pic-index"

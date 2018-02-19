@@ -34,6 +34,10 @@ export const removeSitter = (sitterId) => {
   };
 };
 
+export const fetchAllSitters = () => dispatch => {
+  return SitterApiUtil.fetchAllSitters().then( sitters => dispatch(receiveSitters(sitters)), errors => dispatch(receiveErrors(errors)));
+};
+
 export const fetchSitters = (filters) => dispatch => {
   return SitterApiUtil.fetchSitters(filters).then( sitters => dispatch(receiveSitters(sitters)), errors => dispatch(receiveErrors(errors)));
 };
