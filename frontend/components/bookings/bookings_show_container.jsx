@@ -7,7 +7,7 @@ const mapStateToProps = (state) => {
 
   return {
     bookings: Object.values(state.bookings),
-    // sitters: Object.values(state.entities.sitters),
+    sitters: Object.values(state.entities.sitters),
     // user: Object.values(state.entities.sitters),
   };
 };
@@ -15,7 +15,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchBookings: (user_id) => dispatch(fetchBookings(user_id)),
-    fetchAllSitters: () => dispatch(fetchSitters()),
+    fetchAllSitters: () => dispatch(fetchAllSitters()),
   };
 };
 
