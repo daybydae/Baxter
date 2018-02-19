@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
 
   return {
-    createBooking: booking => dispatch(createBooking(booking)),
+    createBooking: (booking) => dispatch(createBooking(booking)),
     fetchSitter: sitterId => dispatch(fetchSitter(sitterId))
   };
 };

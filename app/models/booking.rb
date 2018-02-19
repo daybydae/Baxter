@@ -17,6 +17,6 @@ class Booking < ApplicationRecord
   validates :sitter_id, :user_id, presence: true
 
   belongs_to :sitter
+  belongs_to :user
 
-  
 end

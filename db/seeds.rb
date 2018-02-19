@@ -8,6 +8,7 @@
 
 Sitter.delete_all
 User.delete_all
+Booking.delete_all
 
 maurice = Sitter.new(
   sittername: "Maurice",

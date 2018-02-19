@@ -5,13 +5,15 @@ import errorsReducer from './errors_reducer';
 import entitiesReducer from './entities_reducer';
 import filterReducer from './filter_reducer';
 import uiReducer from './ui_reducer';
+import bookingsReducer from './bookings_reducer';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   errors: errorsReducer,
   entities: entitiesReducer,
   filter: filterReducer,
-  ui: uiReducer
+  ui: uiReducer,
+  bookings: bookingsReducer,
 });
 
 export default rootReducer;

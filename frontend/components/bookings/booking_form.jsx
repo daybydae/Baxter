@@ -4,10 +4,12 @@ import React from 'react';
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
+    debugger
     this.state = {
       start_date: "",
       end_date: "",
       sitter_id: this.props.match.params.sitter_id,
+      user_id: this.props.currentUser.id,
     };
 
     if (this.props.currentUser) {

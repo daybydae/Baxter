@@ -89,7 +89,7 @@ class Nav extends React.Component {
             <li>
               <div className="nav-right-box">
 
-                <Link to={"/"}>
+                <Link to={`/users/${this.props.currentUser.id}/bookings`}>
 
                   <span className="bookings-icon">
                     <i className="far fa-envelope">

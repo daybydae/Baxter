@@ -26,18 +26,18 @@ export const removeBooking = (bookingId) => {
   };
 };
 
-export const fetchBookings = () => dispatch => {
-  return BookingApiUtil.fetchBookings().then( bookings => dispatch(receiveBookings(bookings)), errors => dispatch(receiveErrors(errors)));
+export const fetchBookings = (userId) => dispatch => {
+  return BookingApiUtil.fetchBookings(userId).then( bookings => dispatch(receiveBookings(bookings)), errors => dispatch(receiveErrors(errors)));
 };
 
-export const fetchBooking = () => dispatch => {
-  return BookingApiUtil.fetchBooking().then( booking => dispatch(receiveBooking(booking)), errors => dispatch(receiveErrors(errors)));
+export const fetchBooking = (userId, bookingId) => dispatch => {
+  return BookingApiUtil.fetchBooking(userId, bookingId).then( booking => dispatch(receiveBooking(booking)), errors => dispatch(receiveErrors(errors)));
 };
 
-export const createBooking = (booking) => dispatch => {
-  return BookingApiUtil.createBooking(booking).then( booking => dispatch(receiveBooking(booking)), errors => dispatch(receiveErrors(errors)));
+export const createBooking = (userId, booking) => dispatch => {
+  return BookingApiUtil.createBooking(userId, booking).then( booking => dispatch(receiveBooking(booking)), errors => dispatch(receiveErrors(errors)));
 };
 
-export const deleteBooking = (bookingId) => dispatch => {
-  return BookingApiUtil.deleteBooking(bookingId).then( () => dispatch(removeBooking(bookingId)), errors => dispatch(receiveErrors(errors)));
+export const deleteBooking = (booking) => dispatch => {
+  return BookingApiUtil.deleteBooking(booking).then( () => dispatch(removeBooking(bookingId)), errors => dispatch(receiveErrors(errors)));
 };

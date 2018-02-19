@@ -5,7 +5,7 @@ class Api::BookingsController < ApplicationController
   end
 
   def index
-    @booking = Booking.all
+    @bookings = Booking.all
   end
 
   def create

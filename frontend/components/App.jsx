@@ -2,17 +2,13 @@ import React from 'react';
 import NavContainer from './nav/nav_container';
 import SessionFormContainer from './session_form/session_form_container';
 import BookingFormContainer from './bookings/booking_form_container';
-
+import BookingsShowContainer from './bookings/bookings_show_container';
+import BookingShow from './bookings/booking_show';
 import SitterShowContainer from './sitter_show/sitter_show_container';
-
 import AppContainer from './app/app_container';
-
 import SitterIndexContainer from './search/sitter_index_container';
-
 import UserShowContainer from './user_show/user_show_container';
-
 import SearchContainer from './search/search_container';
-
 import { Route, Link } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -57,8 +53,10 @@ class App extends React.Component {
               <AuthRoute path="/signup" component={SessionFormContainer} />
               <Route exact path="/" component={SearchContainer} />
               <Route exact path="/sitters/:sitterId" component={SitterShowContainer} />
+              <ProtectedRoute exact path="/users/:userId/bookings" component={BookingsShowContainer} />
               <ProtectedRoute exact path="/users/:userId" component={UserShowContainer} />
               <ProtectedRoute exact path="/sitters/:sitter_id/bookings" component={BookingFormContainer} />
+              <ProtectedRoute exact path="/users/:userId/bookings/:bookingId" component={BookingShow} />
 
             </div>
 
