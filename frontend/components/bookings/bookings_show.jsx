@@ -1,14 +1,15 @@
 import React from 'react';
 import BookingShow from './booking_show';
+import BookingShowContainer from './booking_show_container';
 
 class BookingsShow extends React.Component {
   componentDidMount() {
-    this.props.fetchBookings(this.props.match.params.userId)
+
+    this.props.fetchBookings(this.props.match.params.userId);
     this.props.fetchAllSitters();
   }
 
   render () {
-
     if (Object.keys(this.props.bookings).length !== 0) {
       return (
         <div className="index">
@@ -17,10 +18,9 @@ class BookingsShow extends React.Component {
               this.props.bookings.map( (booking) => {
                 return (
                   <li className="booking-item-box" key={booking.id}>
-                    <BookingShow
+                    <BookingShowContainer
                       key={booking.id}
                       booking={booking}
-
                       />
                   </li>
                 );

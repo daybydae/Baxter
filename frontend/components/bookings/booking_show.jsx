@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 
-import BookingsShowContainer from './bookings_show_container';
 
 class BookingShow extends React.Component {
   constructor(props) {
@@ -9,15 +8,18 @@ class BookingShow extends React.Component {
 
   }
 
-  render () {
+  componentDidMount() {
+    debugger
+    this.props.fetchSitter(this.props.booking.sitter_id)
+  }
 
+  render () {
+    
     const { sitter_id, user_id, start_date, end_date } = this.props.booking;
 
     return (
       <div>
         <div>{sitter_id}
-        </div>
-        <div>{user_id}
         </div>
         <div>{start_date}
         </div>
@@ -68,4 +70,4 @@ class BookingShow extends React.Component {
   }
 }
 
-export default withRouter(BookingShow);
+export default BookingShow;
