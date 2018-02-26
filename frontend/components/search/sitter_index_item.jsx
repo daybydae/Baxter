@@ -15,7 +15,7 @@ class IndexItem extends React.Component {
 
     return (
 
-        <Link to={`sitters/${this.props.sitter.id}`} className="sitter-item-link">
+        <Link to={`/sitters/${this.props.sitter.id}`} className="sitter-item-link">
           <div className="sitter-card">
             <div className="profile-pic-box-sitter">
               <img className="profile-pic-index"

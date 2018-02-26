@@ -17,12 +17,13 @@ class BookingsShow extends React.Component {
         <div className="index">
           <ul className="">
             {
-              this.props.bookings.map( (booking) => {
+              this.props.bookings.map( (booking, idx) => {
                 return (
                   <li className="booking-item-box" key={booking.id}>
                     <BookingShowContainer
                       key={booking.id}
                       booking={booking}
+                      num={idx}
                       />
                   </li>
                 );
