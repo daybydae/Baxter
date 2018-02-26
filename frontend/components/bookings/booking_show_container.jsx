@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state) => {
   return {
-    sitter: state.sitter,
+    sitters: Object.values(state.entities.sitters),
   };
 };
 

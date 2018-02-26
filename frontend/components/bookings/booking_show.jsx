@@ -5,21 +5,14 @@ import { withRouter, Link } from 'react-router-dom';
 class BookingShow extends React.Component {
   constructor(props) {
     super(props);
-
-  }
-
-  componentDidMount() {
-    debugger
-    this.props.fetchSitter(this.props.booking.sitter_id)
   }
 
   render () {
-    
     const { sitter_id, user_id, start_date, end_date } = this.props.booking;
-
+    debugger
     return (
       <div>
-        <div>{sitter_id}
+        <div>{this.props.sitters[sitter_id-1].sittername}
         </div>
         <div>{start_date}
         </div>

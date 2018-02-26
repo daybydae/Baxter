@@ -5,8 +5,10 @@ import BookingShowContainer from './booking_show_container';
 class BookingsShow extends React.Component {
   componentDidMount() {
 
-    this.props.fetchBookings(this.props.match.params.userId);
-    this.props.fetchAllSitters();
+    this.props.fetchAllSitters().then( () => {
+      this.props.fetchBookings(this.props.match.params.userId);
+    });
+
   }
 
   render () {

@@ -1,7 +1,7 @@
 import { RECEIVE_ALL_SITTERS, RECEIVE_SITTER, REMOVE_SITTER } from '../actions/sitter_actions';
 import { merge } from 'lodash';
 
-const sitterReducer = (oldState = {}, action) => {
+const sittersReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_ALL_SITTERS:
@@ -17,4 +17,4 @@ const sitterReducer = (oldState = {}, action) => {
   }
 };
 
-export default sitterReducer;
+export default sittersReducer;
