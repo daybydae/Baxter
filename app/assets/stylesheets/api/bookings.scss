@@ -1,15 +1,15 @@
 .booking-sitter {
-  width: 15%;
+  width: 20%;
   display: flex;
 }
 
 .main-content-bookings {
   background: white;
-  display: flow-root;
+  display: inline-block;
 }
 
 .booking-item-box {
-  margin: 25px;
+  margin: 4%;
 
 }
 
@@ -21,4 +21,19 @@
 .profile-icon-circle {
   position: relative;
   border-radius: 50%;
+}
+
+.index-booking {
+  height: 100%;
+  background: white;
+  display: flex;
+}
+
+.full-width {
+  float:left;
+  width: 60%;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  margin: auto;
 }

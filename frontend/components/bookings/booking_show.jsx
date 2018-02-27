@@ -15,7 +15,7 @@ class BookingShow extends React.Component {
     const end = new Date(end_date);
     const sitter = this.props.sitters[sitter_id-1];
     return (
-      <div className="index">
+      <div className="index-booking">
         <Link to={`/sitters/${sitter_id}`}>
           <div className="booking-sitter">
             <div className="profile-icon-box-sitter">

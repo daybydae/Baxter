@@ -14,24 +14,26 @@ class BookingsShow extends React.Component {
   render () {
     if (Object.keys(this.props.bookings).length !== 0) {
       return (
-        <div className="main-content-sitter-show">
-          <div className="hero-container">
-            <div className="member-profile-hero-wrap">
-              <ul className="main-content-bookings">
-                {
-                  this.props.bookings.map( (booking, idx) => {
-                    return (
-                      <li className="booking-item-box" key={booking.id}>
-                        <BookingShowContainer
-                          key={booking.id}
-                          booking={booking}
-                          num={idx}
-                          />
-                      </li>
-                    );
-                  })
-                }
-              </ul>
+        <div className="container-search">
+          <div className="search-container">
+            <div className="column full-width">
+              <div className="index">
+                <ul className="main-content-bookings">
+                  {
+                    this.props.bookings.map( (booking, idx) => {
+                      return (
+                        <li className="booking-item-box" key={booking.id}>
+                          <BookingShowContainer
+                            key={booking.id}
+                            booking={booking}
+                            num={idx}
+                            />
+                        </li>
+                      );
+                    })
+                  }
+                </ul>
+              </div>
             </div>
           </div>
         </div>
