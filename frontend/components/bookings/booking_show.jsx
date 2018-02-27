@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import SitterIndexItem from '../search/sitter_index_item';
+import SearchContainer from '../search/search_container';
 
 
 class BookingShow extends React.Component {
@@ -10,20 +11,30 @@ class BookingShow extends React.Component {
 
   render () {
     const { sitter_id, user_id, start_date, end_date } = this.props.booking;
+    const start = new Date(start_date);
+    const end = new Date(end_date);
     const sitter = this.props.sitters[sitter_id-1];
     return (
-      <div>
-        <div>{sitter.sittername}
+      <div className="index">
+        <Link to={`/sitters/${sitter_id}`}>
+          <div className="booking-sitter">
+            <div className="profile-icon-box-sitter">
+              <div>
+                <img className="profile-icon-circle" src={sitter.image_thumb}>
+                </img>
+              </div>
+            </div>
+            <div className="booking-sitter-name">
+              {sitter.sittername}
+            </div>
+          </div>
+        </Link>
+
+        <div>{start.toDateString()}
         </div>
-        <div>{start_date}
+        <div>{end.toDateString()}
         </div>
-        <div>{end_date}
-        </div>
-        <SitterIndexItem
-          key={sitter.sitter_id}
-          sitter={sitter}
-          num={this.props.num}
-        />
+
 
       </div>
     );
