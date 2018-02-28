@@ -34,8 +34,8 @@ export const fetchBooking = (userId, bookingId) => dispatch => {
   return BookingApiUtil.fetchBooking(userId, bookingId).then( booking => dispatch(receiveBooking(booking)), errors => dispatch(receiveErrors(errors)));
 };
 
-export const createBooking = (userId, booking) => dispatch => {
-  return BookingApiUtil.createBooking(userId, booking).then( booking => dispatch(receiveBooking(booking)), errors => dispatch(receiveErrors(errors)));
+export const createBooking = (booking) => dispatch => {
+  return BookingApiUtil.createBooking(booking).then( booking => dispatch(receiveBooking(booking)), errors => dispatch(receiveErrors(errors)));
 };
 
 export const deleteBooking = (booking) => dispatch => {

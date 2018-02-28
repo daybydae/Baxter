@@ -14,6 +14,7 @@ class BookingShow extends React.Component {
     const start = new Date(start_date);
     const end = new Date(end_date);
     const sitter = this.props.sitters[sitter_id-1];
+    debugger
     return (
       <div className="index-booking">
         <Link to={`/sitters/${sitter_id}`}>

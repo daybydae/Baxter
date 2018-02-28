@@ -5,18 +5,21 @@ class BookingForm extends React.Component {
   constructor(props) {
     super(props);
 
+    if (this.props.currentUser) {
+      this.address = this.props.currentUser.address;
+      this.user_id = this.props.currentUser.id;
+    } else {
+      this.address = "10018";
+      this.user_id = "0";
+    }
+
     this.state = {
       start_date: "",
       end_date: "",
       sitter_id: this.props.match.params.sitter_id,
-      user_id: this.props.currentUser.id,
+      user_id: this.user_id,
     };
 
-    if (this.props.currentUser) {
-      this.address = this.props.currentUser.address;
-    } else {
-      this.address = "10018";
-    }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
