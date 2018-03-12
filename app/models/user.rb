@@ -23,7 +23,7 @@ class User < ApplicationRecord
   validates :username, :password_digest, :session_token, :email, presence: true
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
-  # validates :bookings
+  validates :bookings
 
   has_attached_file :image, default_url: "bulldog.png", styles: {thumb: "500x500#"}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/

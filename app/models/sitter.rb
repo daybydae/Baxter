@@ -20,6 +20,7 @@
 class Sitter < ApplicationRecord
   validates :sittername, :location, :rates, presence: true
   validates :lat, :lng, presence: true
+  # validates :bookings
 
   has_attached_file :image, default_url: "pug.jpg", styles: {thumb: "500x500#"}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
